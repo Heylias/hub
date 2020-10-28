@@ -2,7 +2,7 @@ import moment from 'moment';
 import React, { useState } from 'react';
 
 const ChapterList = ({chapters}) => {
-    const lastUpdate = chapters.sort((a, b) => b.addedAt > a.addedAt ? 1 : -1).slice(0,1).map(chapter => chapter.addedAt);
+    const lastUpdate = chapters.sort((a, b) => moment(b.addedAt).isBefore(a.addedAt) ? 1 : -1).slice(0,1).map(chapter => chapter.addedAt).toString();
     
     const [chapterList, setChapterList] = useState(chapters.sort((a, b) => b.chapter > a.chapter ? 1 : -1))
 
