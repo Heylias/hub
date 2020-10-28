@@ -54,6 +54,7 @@ const EditFanfictionPage = ({match}) => {
         if(id !== "new"){
             setEditing(true)
             fetchFanfiction(id)
+            checkUser()
         }else{
             setFanfiction({...fanfiction, author:`api/users/${ currentUserId }`})
         }
@@ -68,9 +69,6 @@ const EditFanfictionPage = ({match}) => {
         }
     }
 
-    useEffect(() => {
-        checkUser()
-    }, [])
     const handleChange = (event) => {
         const {name, value} = event.currentTarget
         setFanfiction({...fanfiction, [name]:value})
