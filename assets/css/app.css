@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./lato/Lato-Medium.ttf');
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+ul {
+    list-style: none;
+}
+
+a:hover {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+#app {
+    font-family: 'Lato';
+}
+
+.navbar {
+    top: 0;
+    position: sticky;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.navbar i {
+    margin-right: 8px;
+}
+
+.nav-item a:hover {
+    color: skyblue;
+}
+
+.navbar-brand, .nav-item a, #profile-link {
+    color: white;
+}
+
+.home-row {
+    margin: 100px 0;
+}
+
+.fanfic_list {
+    padding-top: 25px;
+    font-size: 12px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.badges-list {
+    display: inline-block;
+}
+
+.search-tags {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    height: 400px;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tag {
+    margin: 20px;
+}
+
+.fanfic_item, .fanfic_item_2 {
+    width: 150px;
+    height: 340px;
+    display: block;
+    margin: 10px;
+    position: relative;
+}
+
+.fanfic_item .fanfic_rating {
+    position: absolute;
+    bottom: 0;
+    margin: 30px 0;
+}
+
+.fanfic_item_2 {
+    width: 400px;
+    height: 255px;
+    margin: 30px 10px;
+}
+
+.fanfic_col {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.badges-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.badget {
+    padding: 5px;
+    border: 1px solid rgba(185, 185, 185, 0.473);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.badget:nth-child(even){
+    background-color: rgba(211, 211, 211, 0.185);
+}
+
+.fanfic_chapters a, .chapter_link {
+    color: darkgrey;
+}
+
+.fanfic_stats {
+    color: #474747;
+}
+
+.fanfic_cover {
+    width: 150px;
+    height: 228px;
+    object-fit: cover;
+}
+
+.home-title_link, .chapters_infos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.fanfiction_item img {
+    border: honeydew 10px;
+}
+
+.fanfiction_item a, .fanfiction_item a:hover {
+    color: #222;
+    text-decoration: none;
+}
+
+.fanfic_rating {
+    margin-top: 10px;
+}
+
+.fanficItem_title {
+    font-size: 14px;
+    color: #222;
+    letter-spacing: 0;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.home-title_link > * {
+    margin: 0;
+}
+
+.list-more {
+    color: grey;
+}
+
+.chapter-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fanfic_title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fanfic_header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.fanfic_details {
+    width: 80%;
+}
+
+.fanfic_tags {
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.chapter {
+    width: 40%;
+    margin: 5px 10px;
+    background-color: rgba(211, 211, 211, 0.61);
+    padding: 10px;
+    font-size: 10px;
+}
+
+.chapter a {
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.chapter-num {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.show-more-link{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(211, 211, 211, 0.61);
+    border: none;
+}
+
+.comment-item {
+    background-color: rgba(190, 190, 190, 0.1);
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.delete-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-link {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(211, 211, 211, 0.61);
+    color: black;
+    font-weight: 500;
+}
+
+.page-item.disabled .page-link, .page-item.active .page-link, .page-link:hover {
+    background-color: rgba(112, 112, 112, 0.473);
+    color: black;
+}
+
+@media screen and (max-width: 768px){
+    .avatar{
+        width: 100px;
+        height: 100px;
+    }
+
+    .nav-item {
+        margin: 20px;
+    }
+}

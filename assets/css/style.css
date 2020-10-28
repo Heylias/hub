@@ -1,0 +1,133 @@
+.carousel {
+    height: 400px;
+    overflow-y: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+.starsimg {
+    height: 200px;
+    width: 100%;
+    display: block;
+}
+
+.container, .container-fluid {
+    margin-top: 20px;
+}
+
+.fanfic-item, .tag-item {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.avatar {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.avatar-medium {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.avatar-mini {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.rating {
+    color: firebrick;
+}
+
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+    color: firebrick !important;
+}
+
+.card-user {
+    overflow: hidden;
+    text-align: left;
+    max-width: 370px;
+    margin: 0 auto 50px;
+    color: #777777;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-user img {
+    height: 300px;
+    display: inline-block;
+    transition: all .25s ease;
+    vertical-align: middle;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.card-user:hover img {
+    transform: none;
+}
+
+.card-user-body {
+    position: relative;
+    padding: 18% 14% 3rem;
+    margin-top: -11.2%;
+    z-index: 1;
+}
+
+.card-user-head {
+    display: block;
+    overflow: hidden;
+}
+
+.card-user-title {
+    font-size: 1rem;
+}
+
+.card-user-body::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    transform-origin: 100% 50%;
+    transform: skewY(-6deg);
+    will-change: transform;
+    transition: all .3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.card-user:hover .card-user-body::before {
+    transform: skewY(0);
+}
+
+.chapter-list table {
+    max-width: 1000px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.login-admin .card {
+    font-size: 200%;
+}
+
+.tag-container {
+    padding: 5px;
+}
+
+.tag-container .tag-link {
+    padding: 5px;
+}
+
+.tag-link:nth-of-type(even){
+    background-color: rgb(240, 240, 240);
+}
+
+@media (min-width: 768px){
+    .login-admin .card {
+        font-size: 100%;
+    }
+}

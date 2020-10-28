@@ -1,0 +1,50 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Users </h1>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Picture</th>
+                    <th>Username</th>
+                    <th>Mail</th>
+                    <th class="text-center">Fanfictions</th>
+                    <th class="text-center">Comments</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in pagination.data %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>
+                        {% if user.userImage != null %}
+                            <img src="/uploads/{{ user.userImage }}" alt="avat de {{ user.email }}" class="avatar avatar-mini">
+                        {% else %}
+                            <i class="fas fa-file-image"></i>
+                        {% endif %}
+                        </td>
+                        <td>{{ user.pseudonym }}</td>
+                        <td>{{ user.email }}</td>
+                        <td class="text-center">
+                            <span class="badge badge-primary rounded">{{ user.fanfictions | length }}</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="badge badge-primary rounded">{{user.comments | length}}</span>
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ path('admin_users_edit', {'id':user.id}) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="{{ path('admin_users_delete', {'id':user.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {{ pagination.display() }}
+    </div>
+{% endblock %}

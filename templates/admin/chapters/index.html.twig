@@ -1,0 +1,40 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Chapters{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Chapters Management</h1>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Added At</th>
+                    <th>Title</th>
+                    <th>Chapter</th>
+                    <th>Link</th>
+                    <th class="text-center">Fanfiction</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for chapter in pagination.data %}
+                    <tr>
+                        <th>{{ chapter.id }}</th>
+                        <td>{{ chapter.addedAt | date('d/m/Y H:i') }}</td>
+                        <td>{{ chapter.title }}</td>
+                        <td>{{ chapter.chapter }}</td>
+                        <td>{{ chapter.link }}</td>
+                        <td class="text-center">{{ chapter.fanfiction.title }}</td>
+                        <td class="text-center">
+                            <a href="{{ path('admin_chapter_edit', {'id':chapter.id}) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="{{ path('admin_chapter_delete', {'id':chapter.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {{ pagination.display() }}
+    </div>
+{% endblock %}
