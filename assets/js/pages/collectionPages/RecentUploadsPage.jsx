@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import DotLoader from '../../components/Loader/DotLoader';
 import FanfictionItem from '../../components/Modals/FanfictionItem2';
 import Pagination from '../../components/Pagination';
