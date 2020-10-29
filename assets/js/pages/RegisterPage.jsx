@@ -40,7 +40,7 @@ const RegisterPage = ({ history }) => {
         }
 
         try{
-            await userAPI.post(user)
+            await userAPI.create(user)
             setErrors({})
             toast.success("You have been successfully registered")
             history.replace("/login")

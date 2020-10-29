@@ -22,6 +22,7 @@ function updateUser(id, user, password){
 
 function createUser(user){
     return Axios.post(USERS_API, user)
+                .then(response => response.data['hydra:member'])
 }
 
 
