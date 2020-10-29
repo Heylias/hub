@@ -8,7 +8,7 @@ api_platform:
     collection:
         pagination:
             enabled: false
-            items_per_page: 25
+            items_per_page: 50
             client_enabled: true
             client_items_per_page: true
     eager_loading:
