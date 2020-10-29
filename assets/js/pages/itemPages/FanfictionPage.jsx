@@ -81,7 +81,7 @@ const FanfictionPage = ({match}) => {
                             <h1 className="fanfic_title">{ fanfiction.title }</h1>
                             <div className="fanfic_header">
                                 <span className="fanfic_cover-image">
-                                    <img src={ !fanfiction.coverImage ? `http://placehold.it/300x300` : fanfiction.coverImage } alt=""/>
+                                    <img src={ !fanfiction.coverImage ? `http://placehold.it/300x300` : fanfiction.coverImage } className="fanfic_cover" alt=""/>
                                 </span>
                                 <div className="fanfic_details">
                                     <h5 className="fanfic_title">
